@@ -38,23 +38,15 @@ const Player = ({ song, setSong }) => {
   return (
     <div className="section__padding">
       <div className="section__background">
-        {!isLoading ? (
-          <img
+      <img
             src={song.cover}
             alt={song.cover}
             className="animate__animated "
           />
-        ) : (
-          <img
-            src={song.cover}
-            alt={song.cover}
-            className="animate__animated"
-          />
-        )}
       </div>
       <div className="app__player_title">
-        {isLoading ? "Loading..." : <div className="animate__animated animate__zoomIn">{ song.title}</div>}
-        <div className="app__player-symbol">
+        {isLoading ? <div className="animate__animated animate__zoomOut">{"Loading..."}</div> : <div className="animate__animated animate__zoomIn">{ song.title}</div>}
+        <div className={isLoading ? "app__player-symbol animate__animated animate__zoomOut" : "app__player-symbol animate__animated animate__zoomIn"}>
           <span className="app__player-dash"></span>
           <span className="app_player-dot"></span>
           <span className="app__player-dash"></span>
@@ -62,7 +54,7 @@ const Player = ({ song, setSong }) => {
       </div>
       {responseJSON != null && !isLoading && (
         <>
-          <div className="app__player_buttons">
+          <div className="app__player_buttons animate__animated animate__fadeInUp">
             {!playing ? (
               <button
                 onClick={() => {

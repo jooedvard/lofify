@@ -1,13 +1,9 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   padding: 0;
   margin: 0;
 }
 
-body {
-  overflow-y: hidden;
- 
-}
 
 .section__padding {
   display: flex;
@@ -24,7 +20,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100%;
-  
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -47,8 +43,12 @@ body {
   margin: 3rem 0;
   font-size: 5rem;
   font-weight: 400;
-  z-index: 3;
   color: white;
+
+  @media screen and (max-width: 650px) {
+    font-size: 2.25rem;
+  }
+
 }
 
 * {
@@ -60,7 +60,7 @@ body {
   gap: 80px;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  
 
   button {
     cursor: pointer;

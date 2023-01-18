@@ -12,12 +12,15 @@ const Libary = ({ setSong }) => {
     <>
       <div className="app__libary_menu">
         {toggle ? (
-          <MdClose
-            fontSize={30}
-            onClick={() => {
-              setToggle(false);
-            }}
-          />
+          <div
+          className="app__libary_open animate__animated animate__zoomOut animate__faster cursor_none"
+          onClick={(e) => {
+            setToggle(true);
+          }}
+        >
+          <span>Open Libary</span>
+          <FaMusic></FaMusic>
+        </div>
         ) : (
           <div
             className="app__libary_open animate__animated animate__zoomIn animate__faster"
@@ -30,36 +33,40 @@ const Libary = ({ setSong }) => {
           </div>
         )}
       </div>
-      {toggle ? (
-        <div
-          className={
-            "app__libary animate__animated animate__slideInLeft animate__faster"
-          }
-        >
-          <div>
-            {music.map((song, index) => {
-              return (
-                <div
-                  className={active == index ? "app__song active" : "app__song"}
-                  key={song.id}
-                  onClick={() => {
-                    setSong(song);
-                    setActive(index);
-                  }}
-                >
-                  <img src={song.cover} alt={song.title} loading={"lazy"}></img>
-                  <div className="app__song-content">
-                    <h2>{song.title}</h2>
-                    <p>{song.id}</p>
-                  </div>
+      <div className={toggle ? "app__libary animate__animated animate__zoomIn " : "app__libary__hide"}>
+      <MdClose
+            fontSize={30}
+            className="app__libary_close"
+            onClick={() => {
+              setToggle(false);
+            }}
+          />
+        <div>
+          {music.map((song, index) => {
+            return (
+              <div
+                className={active == index ? "app__song active" : "app__song"}
+                key={song.id}
+                onClick={() => {
+                  setSong(song);
+                  setActive(index);
+                }}
+              >
+                {" "}
+                <img
+                  src={song.cover}
+                  alt={song.title}
+                  onLoad={(e) => console.log(e.target)}
+                ></img>
+                <div className="app__song-content">
+                  <h2>{song.title}</h2>
+                  <p>{song.id}</p>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
-      ) : (
-        <></>
-      )}
+      </div>
     </>
   );
 };
