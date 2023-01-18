@@ -62,6 +62,7 @@ const Libary = ({ setSong }) => {
                   key={song.id}
                   onClick={() => {
                     setSong(song);
+                    setToggle(false);
                     setActive(index);
                   }}
                 >

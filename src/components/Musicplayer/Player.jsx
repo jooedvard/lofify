@@ -2,7 +2,6 @@ import "./Player.scss";
 import React, { useEffect, useRef, useState } from "react";
 import { BiPlay, BiStop, BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import "animate.css";
-import music from "../../constant/music";
 import { useFetch } from "../../hooks/useFetch";
 
 const Player = ({ song, setSong }) => {
