@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import { FaMusic } from "react-icons/fa";
 import { useClickOutside } from "../../hooks/useClickOutside";
 
-const Libary = ({ setSong }) => {
+const Libary = ({ setSong, setAppActive }) => {
   const innerRef = useClickOutside((e) => {
     setToggle(false);
   });

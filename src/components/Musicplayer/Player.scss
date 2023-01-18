@@ -4,7 +4,6 @@
   margin: 0;
 }
 
-
 .section__padding {
   display: flex;
   height: 100vh;
@@ -48,7 +47,6 @@
   @media screen and (max-width: 650px) {
     font-size: 2.25rem;
   }
-
 }
 
 * {
@@ -57,10 +55,9 @@
 
 .app__player_buttons {
   display: flex;
-  gap: 80px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
-  
 
   button {
     cursor: pointer;
@@ -77,9 +74,45 @@
     cursor: pointer;
     padding: 0.75rem 1rem;
 
+    @media screen and (max-width: 650px) {
+      padding: 0.25rem 0.5rem;
+      font-size: 1rem;
+
+    }
+
     svg {
       font-size: 2rem;
     }
+  }
+}
+.animate__delay-short {
+  animation-delay: 0.5s !important;
+}
+.app__player_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app__player_volume {
+  position: relative;
+  top: 150px;
+  display: flex;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 5px;
+
+  svg {
+    font-size: 2rem;
+    color: white;
+  }
+  input {
+    border: none;
+    box-shadow: none;
+    position: relative;
+    right: 5px;
   }
 }
 

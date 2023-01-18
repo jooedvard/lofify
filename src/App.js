@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      {isSong && < Player song={song} setSong={setSong}></Player>}
+      {isSong && < Player song={song} setSong={setSong} ></Player>}
       <Libary setSong={setSong} />
     </div>
   );
