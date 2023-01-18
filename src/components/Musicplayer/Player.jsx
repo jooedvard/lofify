@@ -77,7 +77,7 @@ const Player = ({ song, setSong }) => {
       </div>
       {
         <div className="app__player_title">
-          <div className="animate__animated animate__zoomIn">{song.title}</div>
+          <div className="animate__animated animate__zoomIn main_title">{song.title}</div>
           <div
             className={"app__player-symbol animate__animated animate__zoomIn"}
           >
