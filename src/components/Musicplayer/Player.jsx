@@ -34,24 +34,36 @@ const Player = ({ song, setSong }) => {
     }
   }, [responseJSON]);
 
-
   return (
     <div className="section__padding">
       <div className="section__background">
-      <img
-            src={song.cover}
-            alt={song.cover}
-            className="animate__animated "
-          />
+        <img src={song.cover} alt={song.cover} className="animate__animated " />
       </div>
-      <div className="app__player_title">
-        {isLoading ? <div className="animate__animated animate__zoomOut">{"Loading..."}</div> : <div className="animate__animated animate__zoomIn">{ song.title}</div>}
-        <div className={isLoading ? "app__player-symbol animate__animated animate__zoomOut" : "app__player-symbol animate__animated animate__zoomIn"}>
-          <span className="app__player-dash"></span>
-          <span className="app_player-dot"></span>
-          <span className="app__player-dash"></span>
+      {responseJSON != null && !isLoading && (
+        <div className="app__player_title">
+          {isLoading ? (
+            <div className="animate__animated animate__zoomOut">
+              {"Loading..."}
+            </div>
+          ) : (
+            <div className="animate__animated animate__zoomIn">
+              {song.title}
+            </div>
+          )}
+          <div
+            className={
+              isLoading
+                ? "app__player-symbol animate__animated animate__zoomOut"
+                : "app__player-symbol animate__animated animate__zoomIn"
+            }
+          >
+            <span className="app__player-dash"></span>
+            <span className="app_player-dot"></span>
+            <span className="app__player-dash"></span>
+          </div>
         </div>
-      </div>
+      )}
+
       {responseJSON != null && !isLoading && (
         <>
           <div className="app__player_buttons animate__animated animate__fadeInUp">
