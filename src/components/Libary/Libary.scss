@@ -1,0 +1,105 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../../fonts/avenir/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: AvenirBlack;
+  src: url(../../fonts/avenir/AvenirLTStd-Black.otf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+$font-base: Avenir;
+$font-heading: AvenirBlack;
+
+.app__libary_menu {
+  position: absolute;
+  right: 5%;
+  top: 7.5%;
+  z-index: 2;
+
+  svg{
+    background-color: white;
+    cursor: pointer;
+  }
+  
+}
+.app__libary_open {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: $font-heading;
+  font-weight: normal;
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #0e0e0e;
+}
+
+
+.app__libary {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+
+  .active{
+    background-color: #0e0e0e;
+    color: white;
+  }
+
+  .app__song {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    position: relative;
+    width: 100%;
+    padding: 0 1rem 0 0;
+
+    &:hover {
+      background: black;
+    }
+
+    &:hover h2 {
+      color: white;
+    }
+
+    .app__song-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 0 0 0 2rem;
+      flex: 1;
+
+      h2 {
+        font-weight: normal;
+
+        font-family: $font-heading;
+      }
+
+      p {
+        font-family: $font-base;
+        color: #aaa;
+      }
+    }
+  }
+  img {
+    width: 200px;
+    transition: 0.5s ease-in-out;
+  }
+}
