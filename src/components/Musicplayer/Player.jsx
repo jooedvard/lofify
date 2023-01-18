@@ -12,6 +12,7 @@ import music from "../../constant/music";
 
 const Player = ({ song, setSong }) => {
   const [playing, setPlaying] = useState(false);
+
   const musicRef = useRef();
 
   const onVolumeChange = (e) => {
@@ -67,8 +68,10 @@ const Player = ({ song, setSong }) => {
     }
   }, [song]);
 
+  
+
   return (
-    <div className="section__padding">
+    <div className="section__padding" key={song.title}>
       <div className="section__background">
         <img src={song.cover} alt={song.cover} className="animate__animated " />
       </div>
