@@ -55,9 +55,9 @@
 
 .app__player_buttons {
   display: flex;
-  gap: 20px;
   align-items: center;
   justify-content: center;
+  margin: 0 15px;
 
   button {
     cursor: pointer;
