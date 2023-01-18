@@ -35,6 +35,7 @@ const Player = ({ song, setSong }) => {
     }
   }, [responseJSON]);
 
+
   return (
     <div className="section__padding">
       <div className="section__background">

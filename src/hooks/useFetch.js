@@ -20,7 +20,7 @@ export function useFetch(url) {
                 setJSON(resp);
 
             } catch (error) {
-
+                console.log(error)
                 setError(error);
             }
 

@@ -78,7 +78,7 @@ $font-heading: AvenirBlack;
   transition: all ease 0.25s;
   overflow-y: scroll;
   box-sizing: content-box;
-
+ 
 
   .active {
     background-color: #0e0e0e;
@@ -133,6 +133,12 @@ $font-heading: AvenirBlack;
 
     @media screen and (max-width: 300px) {
       width: 100px;
+      height: 60px;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: 250px) {
+      width: 90px;
       height: 60px;
       object-fit: cover;
     }
