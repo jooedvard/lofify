@@ -14,7 +14,7 @@
   margin: 0;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -51,13 +51,13 @@ $font-heading: AvenirBlack;
   margin-left: auto;
   cursor: pointer;
   position: absolute;
-    top: -1rem;
-    left: 0;
-    z-index: 10;
-    background-color: white;
+  top: -1rem;
+  left: 0;
+  z-index: 10;
+  background-color: white;
 }
 
-.cursor_none{
+.cursor_none {
   cursor: auto;
 }
 
@@ -75,7 +75,6 @@ $font-heading: AvenirBlack;
   transition: all ease 0.25s;
   overflow-y: scroll;
   box-sizing: content-box;
- 
 
   .active {
     background-color: #0e0e0e;
@@ -90,9 +89,9 @@ $font-heading: AvenirBlack;
     position: relative;
     width: 100%;
     padding: 0 1rem 0 0;
-    
+
     @media screen and (max-width: 650px) {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
 
     &:hover {

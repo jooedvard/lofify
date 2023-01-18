@@ -1,4 +1,4 @@
-import { bg1, bg2, bg3, bg4, bg5, bg6, bg7 } from "./images"
+import { bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9 } from "./images"
 
 const music = [
     {
@@ -42,6 +42,18 @@ const music = [
         id: "Qo0GR2qYMvQ",
         cover: bg7,
         serial_number: 7
+    },
+    {
+        title: "90s Hip Hop",
+        id: "QDTpbB1uCiQ",
+        cover: bg8,
+        serial_number: 8
+    },
+    {
+        title: "Hip Hop Chill",
+        id: "BtxcltY9sTA",
+        cover: bg9,
+        serial_number: 9
     }
 ]
 

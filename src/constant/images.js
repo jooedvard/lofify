@@ -5,6 +5,7 @@ import bg4 from '../assests/bg-4.jpg';
 import bg5 from '../assests/bg-5.jpg';
 import bg6 from '../assests/bg-6.jpg';
 import bg7 from '../assests/bg-7.jpg';
+import bg8 from '../assests/bg-8.jpg';
+import bg9 from '../assests/bg-9.jpg';
 
-
-export { bg1, bg2, bg3, bg4, bg5, bg6, bg7 };
+export { bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9 };
