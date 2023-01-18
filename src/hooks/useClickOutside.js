@@ -12,7 +12,8 @@ export function useClickOutside(callback) {
     useEffect(() => {
         const windowClick = (e) => {
             let {current} = innerRef;
-            if(!e.path.includes(current)){
+            let path = e.path || (e.composedPath && e.composedPath());
+            if(!path.includes(current)){
                 fn.current();
             }
         }
