@@ -96,6 +96,7 @@ const Player = ({ song, setSong }) => {
             </button>
             {!playing ? (
               <button
+              className="app__player_buttons animate__animated"
                 onClick={() => {
                   handleStart();
                 }}
@@ -105,6 +106,8 @@ const Player = ({ song, setSong }) => {
               </button>
             ) : (
               <button
+              key={"stop"}
+              className="app__player_buttons animate__animated animate__zoomIn"
                 onClick={() => {
                   handleStop();
                 }}
