@@ -70,7 +70,7 @@ const Libary = ({ setSong, setAppActive }) => {
                   <img src={song.cover} alt={song.title}></img>
                   <div className="app__song-content">
                     <h2>{song.title}</h2>
-                    <p>{song.id}</p>
+                    <p>{song.category}</p>
                   </div>
                 </div>
               );
